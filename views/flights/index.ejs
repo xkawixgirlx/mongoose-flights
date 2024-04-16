@@ -27,6 +27,9 @@
             <td>
               <%= f.departs.toLocaleString() %>
             </td>
+            <td>
+              <a href="/flights/<%= f.id  %>">Flight Details</a>
+            </td>
             <!-- finish the ternary expression to display 'Yes' or 'Nope' -->
           </tr>
           <!-- Close the forEach using EJS here -->
