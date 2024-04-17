@@ -60,18 +60,18 @@
     <% } else { %>
       <h5>No More Destinations Added</h5>
       <% } %>
-<a href="/flights/<%= flight._id %>/tickets/">New Ticket</a>
+<a href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>
 <h3>Tickets</h3>
-  <% if (flight.tickets) { %>
+  <% if (tickets.length) { %>
     <table>
       <thead>
         <tr>
-          <th>Airport</th>
-          <th>Arrival</th>
+          <th>Seat</th>
+          <th>Price</th>
         </tr>
       </thead>
       <tbody>
-        <% flight.tickets.forEach(function(t) { %>
+        <% tickets.forEach(function(t) { %>
           <tr>
             <!-- .toLocaleDateString() provides a more friendly date format -->
             <td>

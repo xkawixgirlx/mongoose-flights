@@ -6,12 +6,10 @@ const ticketsCtrl = require('../controllers/tickets');
 //This router is mounted and starts with a path of '/'
 
 
-// GET /tickets/new (new functionality)
-router.get('/tickets/new', ticketsCtrl.new);
-// POST /tickets (create functionality)
-router.post('/tickets', ticketsCtrl.create);
-// POST /flights/:id/tickets
-router.post('/flights/:id/tickets', ticketsCtrl.addToTickets);
+// GET  /flights/:id/tickets/new (new functionality)
+router.get('/flights/:id/tickets/new', ticketsCtrl.new);
+// POST /flights/:id/tickets (create functionality)
+router.post('/flights/:id/tickets', ticketsCtrl.create);
 
 
 
